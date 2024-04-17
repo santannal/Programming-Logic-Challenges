@@ -8,21 +8,15 @@ int main() {
     while(scanf("%d", &n) != EOF){
     	
     	for(i = 0; i < n; ++i){
-    		for(j = 0; j < n; ++j){
-    			
-	    		scanf("%d %c", &vetorT[i], &pe[i]);
-	    		if(i != j && vetorT[i] == vetorT[j] && pe[i] != pe[j]) ++cont;
-    		
-    			i = i + 1;
-    		}
+    		scanf("%d %c", &vetorT[i], &pe[i]);
 		}
 		
-		/*for(i = 0; i < n; ++i){
+		for(i = 0; i < n; ++i){
 			for(j = 0; j <= n; ++j){
 
 				if(i != j && vetorT[i] == vetorT[j] && pe[i] != pe[j]) ++cont;
 			}
-		}*/
+		}
 		
 		printf("%d\n", cont);
 	}
