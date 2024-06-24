@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 int main() {
-    int i, n, j, cont;
-    int *vetorT;
-    char *pe;
+    int i, n, j;
     
     while (scanf("%d", &n) != EOF) {
-        vetorT = (int *)malloc(n * sizeof(int));
-        pe = (char *)malloc(n * sizeof(char));
-        cont = 0;
+    	if(n == 0)	break;
+    	
+        int vetorT[n];
+        char pe[n];
+        int cont = 0;
 
         for (i = 0; i < n; ++i) {
             scanf("%d %c", &vetorT[i], &pe[i]);
@@ -18,7 +18,11 @@ int main() {
         for (i = 0; i < n; ++i) { 
                 for (j = i + 1; j < n; ++j) {
                     if (vetorT[i] == vetorT[j] && pe[i] != pe[j]){
-                        cont += 1;
+                        cont++;
+                        vetorT[i] = rand();
+                        vetorT[j] = rand();
+                        pe[j] = 'N';
+                        pe[i] = 'N';
                         break;
                     }
                 }

@@ -2,18 +2,18 @@
 
 int main() {
  
-    int i, j, n[1000], x, bullets, damage;
-    char jumps[1000];
-    
+    int i, j, x;    
     scanf("%d", &x);
     
     for(i = 0; i < x; ++i){
-    	damage = 0;
+    	int damage = 0, bullets = 0;
     	scanf("%d", &bullets);
-    	for(j = 0; j < bullets; ++j){
+    	char jumps[bullets];
+    	int n[bullets];
+    	for(j = 0; j <= bullets; ++j){
     		scanf("%d", &n[j]);
 		}
-		for(j = 0; j < bullets; ++j){
+		for(j = 0; j <= bullets; ++j){
     		scanf("%c", &jumps[j]);
 		}
 		
